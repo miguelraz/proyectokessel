@@ -16,13 +16,22 @@ Implementar en C un programa que utilice el algoritmo de Torneo (basado en el al
 El programa deberá recibir del usuario el número n de hilos a utilizar. 
 Luego, deberá lanzar n hilos que iteren 10 veces, compitiendo en cada iteración para entrar a su sección crítica y utilizando el algoritmo de Torneo para manejar la exclusión mutua. 
 La sección crítica consistirá en tres pasos: 
-• imprimir en pantalla un mensaje que indique que el hilo entró a su sección crítica e indique el identificador del hilo. 
-• realizar iterativamente la suma de los primeros mil números naturales (para tardar un poco) 
-• imprimir en pantalla un mensaje que indique que el hilo ha terminado su sección crítica. 
+• 1. imprimir en pantalla un mensaje que indique que el hilo entró a su sección crítica e indique el identificador del hilo. 
+• 2. realizar iterativamente la suma de los primeros mil números naturales (para tardar un poco) 
+• 3. imprimir en pantalla un mensaje que indique que el hilo ha terminado su sección crítica. 
 Además, deberá indicarse por medio de un mensaje cada vez que el hilo "gane una ronda" y avance al siguiente nivel del árbol. 
-• Incluir un README con nombre y numero de cuenta.
+• 🎯  Incluir un README con nombre y numero de cuenta.
 
 */
+
+int trabajo(int idHilo){
+    printf("Hilo,%i,START,JOB\n", idHilo);
+    int sum = 0;
+    for(int i = 1; i<1001; i++){
+        sum += i;
+    }
+    printf("Hilo,%i,END,JOB\n", idHilo);
+}
 
 // Copia descarada de la practica0 para empezar el programa
 long int main(int argc, char** argv){
